@@ -1,0 +1,41 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:kodebib="http://kodebibliotek.brreg.no/xsd/kodebibliotek" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://kodebibliotek.brreg.no/xsd/kodebibliotek" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:attribute name="CodeID-PH" type="xsd:anyURI"/>
+	<xsd:attribute name="NodeID-PH" type="xsd:anyURI"/>
+	<xsd:attribute name="CodeText-PH" type="xsd:string"/>
+	<xsd:attribute name="NodeText-PH" type="xsd:string"/>
+	<xsd:attribute name="PathText-PH" type="xsd:string"/>
+	<xsd:attribute name="NodeName-PH" type="xsd:string"/>
+	<xsd:attributeGroup name="PlaceholderAttributes">
+		<xsd:attribute ref="kodebib:CodeID-PH"/>
+		<xsd:attribute ref="kodebib:NodeID-PH"/>
+		<xsd:attribute ref="kodebib:CodeText-PH"/>
+		<xsd:attribute ref="kodebib:NodeText-PH"/>
+		<xsd:attribute ref="kodebib:PathText-PH"/>
+		<xsd:attribute ref="kodebib:NodeName-PH"/>
+	</xsd:attributeGroup>
+	<xsd:attribute name="NavigationHierarchyID" type="xsd:anyURI"/>
+	<xsd:attribute name="NodeListID" type="xsd:anyURI"/>
+	<xsd:complexType name="Code" abstract="true">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute ref="kodebib:NodeListID" use="required"/>
+				<xsd:attributeGroup ref="kodebib:PlaceholderAttributes"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:attribute name="CodeTypeID" type="xsd:anyURI"/>
+	<xsd:attributeGroup name="PlaceholderAttributesCodeType">
+		<xsd:attribute ref="kodebib:CodeID-PH"/>
+		<xsd:attribute ref="kodebib:CodeText-PH"/>
+	</xsd:attributeGroup>
+	<xsd:complexType name="ExternalCode">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute ref="kodebib:CodeTypeID" use="required"/>
+				<xsd:attributeGroup ref="kodebib:PlaceholderAttributesCodeType"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:schema>
