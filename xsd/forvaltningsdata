@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://seres.no/xsd/forvaltningsdata" targetNamespace="http://seres.no/xsd/forvaltningsdata" elementFormDefault="unqualified">
+  <!-- Systemet som har generert XSD-en -->
+  <xsd:attribute name="dataFormatProvider" type="xsd:string"/>
+  <!-- Skjemaidentifikator, samme som skjemanummer for ORxsd-baserte skjemaer -->
+  <xsd:attribute name="dataFormatId" type="xsd:string"/>
+  <!-- Skjemaversjon, samme som spesifikasjonsnummer for ORxsd-baserte skjemaer -->
+  <xsd:attribute name="dataFormatVersion" type="xsd:string"/>
+  <!-- Skjematittel -->
+  <xsd:attribute name="tittel" type="xsd:string"/>
+  <!-- Etatens egen id for et skjema (f.eks. RF-0002, RA-0900) -->
+  <xsd:attribute name="blankettnummer" type="xsd:string"/>
+  <!-- Skjemanummer fra ORdb -->
+  <xsd:attribute name="skjemanummer" type="xsd:string"/>
+  <!-- Skjemaversjon fra ORdb -->
+  <xsd:attribute name="spesifikasjonsnummer" type="xsd:string"/>
+  <!-- Identifikator for ORdb-grupper (ORdb.skjemagruppe.skjemagruppenr) -->
+  <xsd:attribute name="gruppeid" type="xsd:string"/>
+  <!-- Identifikator for ORdb-datadefinisjoner (ORdb.feltkode.feltnr) -->
+  <xsd:attribute name="orid" type="xsd:string"/>
+  <!-- Identifikator for ORdb-representasjonsformat (ORdb.representasjonsformat.representasjonsf_nr) -->
+  <xsd:attribute name="repformatid" type="xsd:string"/>
+  <!-- Rekkefølge av enkeltfelter i et skjema slik det er definert i ORdb ("numm"-en) -->
+  <xsd:attribute name="feltnummer" type="xsd:string"/>
+  <!-- Beskrivelsestekst for element -->
+  <xsd:attribute name="beskrivelse" type="xsd:string"/>
+  <!-- Kommentartekst for element -->
+  <xsd:attribute name="kommentar" type="xsd:string"/>
+  <!-- Den skjemaansvarliges (etatens) organisasjonsnummer -->
+  <xsd:attribute name="etatid" type="xsd:string"/>
+  <!-- Den skjemaansvarliges (etatens) navn -->
+  <xsd:attribute name="etatnavn" type="xsd:string"/>
+  <!-- Globalidentifikator for SERES-baserte metadataelementer (generert av SERES Repository) -->
+  <xsd:attribute name="guid" type="xsd:string"/>
+  <!-- GUID for annotert begrep for SERES-baserte metadataelementer -->
+  <xsd:attribute name="semRef" type="xsd:string"/>
+  <!-- Intern id i SERES Repository -->
+  <xsd:attribute name="xmi.id" type="xsd:token"/>
+  <!-- Elementtype i SERES Repository - Brukes for test -->
+  <xsd:attribute name="elementtype" type="xsd:string"/>
+</xsd:schema>
