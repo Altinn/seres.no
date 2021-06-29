@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:kodebib="http://kodebibliotek.brreg.no/xsd/kodebibliotek" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://kodebibliotek.brreg.no/xsd/kodebibliotek" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xsd:attribute name="CodeID-PH" type="xsd:anyURI"/>
